@@ -73,10 +73,10 @@ class Student:
         self.age = age
         self.student_id = student_id
         self.grade_level = grade_level
-
+# a function to display student information
     def get_student_details(self):
         return f"Name: {self.first_name} {self.last_name}, Age: {self.age}, id: {self.student_id}, grade: {self.grade_level}"
-    
+#a fucntion to get user input and validate some of the inputs
     @staticmethod
     def register_student():
         first_name: str = input("Enter your first name: ")
@@ -91,10 +91,11 @@ class Student:
              print("Please enter a valid positive number for age.")
 
         grade_level = input("enter grade level: ")
-        #auto generate the student id and slice it to a shorhand id (8digits)
+#auto generate the student id and slice it to a shorhand id (8digits)
         student_id = str(uuid.uuid4())[:8]
         return Student(first_name, last_name, age, student_id, grade_level)
 
+# a function to run the system depending on the user choice
 def main():
     students =[]
     while True:
